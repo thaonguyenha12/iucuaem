@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xin Chào 2025!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Iu Của Iemmm</h1>
+        <form>
+            <label for="message">Nội dung thư:</label>
+            <textarea id="message" name="message" rows="10" cols="30"></textarea>
+            <button type="button" onclick="submitForm()">Gửi thư</button>
+        </form>
+        <div id="output" class="output" style="display:none;">
+            <h2>Nội dung thư</h2>
+            <p id="outputMessage"></p>
+            <video id="outputVideo" controls style="display:none;"></video>
+        </div>
+    </div>
+    <script>
+        function submitForm() {
+            const message = document.getElementById('message').value;
+            const video = document.getElementById('video').files[0];
+            if (message) {
+                document.getElementById('outputMessage').innerText = message;
+                if (video) {
+                    const videoReader = new FileReader();
+                    videoReader.onload = function (e) {
+                        document.getElementById('outputVideo').src = e.target.result;
+                    };
+                    videoReader.readAsDataURL(video);
+                    document.getElementById('outputVideo').style.display = 'block';
+                } else {
+                    document.getElementById('outputVideo').style.display = 'none';
+                }
+                document.querySelector('.output').style.display = 'block';
+            } else {
+                alert('Vui lòng nhập nội dung thư.');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('ảnh/IMG_3969.JPG') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: auto;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #ff69b4;
+    font-size: 2.5em;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #ff69b4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4f79;
+}
+
+.output {
+    margin-top: 20px;
+}
+
+.output video {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
